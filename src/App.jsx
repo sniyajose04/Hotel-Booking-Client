@@ -11,12 +11,14 @@ import Layout from './pages/HotelOwner/Layout';
 import DashBoard from './pages/HotelOwner/DashBoard';
 import AddRoom from './pages/HotelOwner/AddRoom';
 import ListRoom from './pages/HotelOwner/ListRoom';
+import SaveUser from './components/SaveUser';
 
 const App = () => {
-
+   
   const isOwnerPath = useLocation().pathname.includes("owner")
   return (
     <div>
+       <SaveUser />
       {!isOwnerPath && <Navbar/>}
       {false && <HotelReg/>}
       <div className = 'min-h-[70vh]'>
